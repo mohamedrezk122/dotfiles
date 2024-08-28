@@ -1,0 +1,3 @@
+[submodule "statusbar"]
+	path = statusbar
+	url = git@github.com:mohamedrezk122/i3blocks-statusbar-scripts.git
