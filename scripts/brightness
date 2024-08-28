@@ -1,0 +1,8 @@
+#!/bin/sh
+# screen=$(xrandr | grep " connected" | cut -f1 -d " ")
+# xrandr --output DP-2 --brightness 0.7
+
+# xbacklight -set 65 &
+# sct 3500 &
+
+redshift -oP -O 3500 -b .5

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+ROFI="rofi -dmenu -theme Monokai"
+# use dmenu instead of rofi if it is not installed
+if [ ! -x "$(command -v rofi)" ];then
+    ROFI="dmenu"
+fi
+
+choice=$(echo "sleep\nreboot\npoweroff\nlogout" | $ROFI -p "action")
+[ -z "$choice" ] && exit # exit if no choice
+
+confirm=$(echo  "yes\nno" | $ROFI -p "[$choice] sure? ")
+[ "$confirm" != "yes" ] && exit  # exit if anything other than yes
+
+case "$choice" in
+    sleep)    doas /sbin/zzz      ;;
+    reboot)   doas /sbin/reboot   ;;
+    poweroff) doas /sbin/poweroff ;;
+    logout)   i3-msg exit         ;;
+    *)        exit                ;;
+esac

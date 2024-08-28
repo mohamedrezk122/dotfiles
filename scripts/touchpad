@@ -1,0 +1,6 @@
+#!/bin/sh
+# fix the default touchpad settings
+xinput set-prop "pointer:MSFT0001:00 06CB:7F28 Touchpad" "Synaptics Tap Action"  1, 1, 1, 1, 1, 1, 1
+xinput set-prop "pointer:MSFT0001:00 06CB:7F28 Touchpad" "Synaptics Scrolling Distance" -29, -29
+xinput set-prop "pointer:MSFT0001:00 06CB:7F28 Touchpad" "Synaptics Two-Finger Scrolling" 1, 1
+xinput set-prop "pointer:MSFT0001:00 06CB:7F28 Touchpad" "Synaptics Palm Detection" 1

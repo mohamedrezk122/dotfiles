@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# a script to lookscreen with xscreensaver but ensures that keyboard layout is changed to english
+# before locking that is because xscreensaver does not allow changing the language 
+# also it returns the layout with language before locking the screen 
+# this is an optimization to continuously running script in the background that watching 
+# for locking command to change the language
+current_layout=$(setxkbmap -query  | grep layout | awk '{print $2}' | cut -d "," -f 1)
+echo "$current_layout" > /tmp/lang.txt
+setxkbmap -layout us,ara
+xscreensaver-command -lock
+xscreensaver-command -watch | while read a; do
+    if grep -q "^UNBLANK" <<<"$a"; then
+        setxkbmap -layout $(cat /tmp/lang.txt)
+        pkill -f "xscreensaver-command -watch"
+        break 
+        exit 1 
+    fi
+done

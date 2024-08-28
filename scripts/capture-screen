@@ -1,0 +1,7 @@
+#!/bin/sh
+
+file=$HOME/pictures/screenshots/shot-$(date +%y-%m-%d_%H-%M-%S).png
+# save the image after capture
+maim -s "$file"
+# copy image to clipboard
+cat "$file" | xclip -selection clipboard -target image/png -i

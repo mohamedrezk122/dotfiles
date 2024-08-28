@@ -1,0 +1,10 @@
+#!/usr/bin/sh
+
+filename="$(date +%Y-%m-%d.md)"
+filepath="/home/rezk/Documents/todos/2024-days/$filename"
+# if it does not exist
+if [ ! -f "$filepath" ]; then
+  touch "$filepath"
+  echo "# $(date +%A)\n" > "$filepath"
+fi
+lvim "$filepath"

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# map caps to  escape
+setxkbmap -option caps:swapescape
+# set menu key as super 
+setxkbmap -option altwin:menu_win

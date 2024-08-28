@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# a script to turn on and off the conservation mode for lenovo laptops
+# which stops the battery charging at 60%
+file="/sys/bus/platform/drivers/ideapad_acpi/VPC2004:00/conservation_mode" 
+case "$1" in 
+    disable) echo 0 > "$file" ;;
+    enable)  echo 1 > "$file" ;;
+    *)       echo "Usage: ./conservation [enable|disable]" ;;
+esac
+
+mode=$(cat "$file")
+# print current mode if not option passed 
+[ "$mode" = 0  ] &&
+    echo "-CURRENTLY: conservation is disabled" ||
+    echo "-CURRENTLY: conservation is enabled"

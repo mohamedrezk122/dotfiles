@@ -1,0 +1,17 @@
+#!/bin/sh
+# export man pages in pdf and open them in default application
+# it useful in navigating the docs of the command outside the terminal
+
+command="$(dmenu -t -p Command: )"
+
+# exit if no command selected
+[ -z "$command" ] && exit
+
+pdfpath="/tmp/man-$command.pdf"
+# if not there, generate one
+if [ ! -f "$pdfpath" ]; then
+    man -Tpdf $command > $pdfpath
+fi
+
+# open in default application
+xdg-open $pdfpath
