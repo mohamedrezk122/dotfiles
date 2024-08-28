@@ -1,0 +1,49 @@
+#!/bin/bash
+# .bashrc
+# _               _
+#| |__   __ _ ___| |__  _ __ ___
+#| '_ \ / _` / __| '_ \| '__/ __|
+#| |_) | (_| \__ \ | | | | | (__
+#|_.__/ \__,_|___/_| |_|_|  \___|
+
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# LS_COLORS+=:ow=
+export PATH="$HOME/pkgs/pypy3.10-v7.3.16-linux64/bin:$PATH"
+export PATH=/opt/texlive/2021/bin/x86_64-linux/:$PATH
+export PATH="$HOME/pkgs/context/tex/texmf-linux-64/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/lib/gems/bin:$PATH"
+export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="/usr/lib/:$PATH"
+export PATH="~/.local/bin:$PATH"
+
+export NO_AT_BRIDGE=1
+export XDG_RUNTIME_DIR="/home/rezk/.cache/xdgr"
+export GIT_EDITOR=subl4
+export GEM_HOME="$HOME/.local/lib/gems"
+export JAVA_HOME="/usr/lib/jvm/openjdk17/"
+
+# export PYTHONPATH=${PYTHONPATH}:"/usr/lib/python3.12/:/usr/lib/python3.12/lib-dynload"
+export PYTHONPATH=$PYTHONPATH:"/usr/local/python3.11.6/:/usr/local/python3.11.6/lib/python3.11/lib-dynload/"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib/"
+export ROS_PACKAGE_PATH="$ROS_PACKAGE_PATH:$HOME/Documents/asmarine/orb-slam-fixed/ORB_SLAM3/Examples/ROS"
+
+# # >>> conda initialize >>>
+# # !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('/home/rezk/.miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/rezk/.miniforge3/etc/profile.d/conda.sh" ]; then
+#         . "/home/rezk/.miniforge3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/rezk/.miniforge3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# # <<< conda initialize <<<
+

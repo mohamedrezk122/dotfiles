@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+export SCRIPTS="$HOME/scripts"
+export STATUSBAR="$HOME/scripts/statusbar"
+export FILEMANAGER=ranger
+export GUI_FILE_MANAGER=thunar
+export EDITOR=lvim
+export GUI_EDITOR=subl4
+export BROWSER=firefox
+export TERMINAL=st
+
+# some startup scripts
+sh   $SCRIPTS/set-bg
+sh   $SCRIPTS/brightness
+sh   $SCRIPTS/touchpad
+sh   $SCRIPTS/keyboard
+
+xscreensaver --no-splash  &
+sxhkd -m -1 -c ~/.config/sxhkd/sxhkdrc &
+
+dunst & 
+xset -b
+flameshot &
+

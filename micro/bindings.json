@@ -1,0 +1,12 @@
+{
+    "Alt-/": "lua:comment.comment",
+    "Alt-g": "VSplit",
+    "Alt-h": "HSplit",
+    "Ctrl-l": "command:tree",
+    "Ctrl-r": "command:reload",
+    "Ctrl-t": "VSplit,command:term",
+    "Ctrl-w": "Save,Quit",
+    "CtrlUnderscore": "lua:comment.comment",
+    "F4": "command:jumptag",
+    "F5": "lua:wc.wordCount"
+}

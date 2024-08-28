@@ -1,0 +1,73 @@
+# terminal
+super + Return
+    $TERMINAL
+
+# browser
+super + b
+    $BROWSER
+
+# gui file manager 
+super + p 
+    $GUI_FILE_MANAGER & disown
+
+# volume
+super + {k, j, m}
+	$STATUSBAR/sb-volume {inc, dec, mute} &&  pkill -RTMIN+2 i3blocks
+
+# mic
+super + n 
+    $STATUSBAR/sb-mic toggle &&  pkill -RTMIN+2 i3blocks
+
+# language
+super + space
+    $STATUSBAR/sb-langswitch && pkill -RTMIN+1 i3blocks
+
+# screenshot
+super + Print 
+    $SCRIPTS/capture-screen
+
+Print
+    flameshot gui 
+    
+# screenshot
+super + Print 
+    $SCRIPTS/capture-screen
+
+# session manager
+super + shift + p
+    $SCRIPTS/session-manager
+        
+# dmenu
+super + t 
+    dmenu_run
+
+# xscreensaver
+super + l 
+    $SCRIPTS/lockscreen
+
+# rofi
+ctrl + space     
+  
+    rofi -show combi -modes combi -combi-modes "window,drun" -theme Monokai -font "Ubuntu Mono 20" -display-drun "" -display-window "" -show-icons
+
+# bookmarks
+super + {bracketleft, bracketright}
+    $SCRIPTS/bookmark-scripts/{bookmarkthis.sh,getbookmark.sh}
+
+# media 
+super + {u,y,i}
+    playerctl {play-pause,previous,next}
+
+# man page
+super + slash 
+    $SCRIPTS/manpdf
+
+#brightness 
+super + shift + {equal, minus}
+     xbacklight -{inc,dec} 5 -steps 50 && pkill -RTMIN+3 i3blocks
+
+super + o
+    emacsclient -c -a "emacs"   
+
+super + semicolon
+    $SCRIPTS/music-downloader

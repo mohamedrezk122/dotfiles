@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: quantum-sympy
+# key: qu_
+# --
+
+#+begin_src python :session :results raw
+    from sympy import *
+    from sympy.physics.quantum import * 
+    $0
+    latex(inner, mode="equation*")
+#+end_src

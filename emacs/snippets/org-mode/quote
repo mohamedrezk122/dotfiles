@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: quote
+# key: quo_
+# --
+
+#+begin_quote
+$0
+#+end_quote 
+

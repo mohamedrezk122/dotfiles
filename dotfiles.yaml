@@ -1,0 +1,53 @@
+- defaults:
+    link:
+      relink: true
+
+- link:
+    # pdf apps
+    ~/.config/zathura/: zathura/
+    ~/.config/sioyek: sioyek/
+    # i3wm
+    ~/.config/i3/: i3/
+    ~/.config/i3blocks/: i3blocks/    
+    # file managers
+    ~/.config/lf: lf/
+    ~/.config/ranger: ranger/
+    # editors
+    ~/.config/emacs: emacs/
+    ~/.config/lvim: lvim/
+    ~/.config/micro: micro/
+
+    ~/.config/alacritty: alacritty/
+    ~/.config/pip: pip/
+    ~/.config/sxhkd/: sxhkd/
+    ~/.config/htop/: htop/
+    # bash
+    ~/.bashrc: bash/bashrc
+    ~/.bash_aliases: bash/bash_aliases
+    ~/.bash_profile: bash/bash_profile
+    # zsh
+    ~/.zshenv: .zshenv
+    ~/.config/zsh: zsh/
+
+    # some home stuff
+    ~/.xprofile: .xprofile
+    ~/.nvidia-settings-rc: .nvidia-settings-rc
+    ~/.inputrc: .inputrc
+    ~/.xsession: .xsession
+    ~/.xscreensaver: .xscreensaver
+
+- create:
+    - ~/.config/zsh/
+    - ~/.config/zathura/
+    - ~/.config/lf/
+    - ~/.config/i3/
+    - ~/.config/i3blocks/
+    - ~/.config/alacritty/
+    - ~/.config/emacs/
+    - ~/.config/ranger/
+    - ~/.config/lvim/
+    - ~/.config/micro/
+    - ~/.config/pip/
+    - ~/.config/sioyek/
+    - ~/.config/sxhkd/
+    - ~/.config/htop/

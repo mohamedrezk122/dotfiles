@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: metadata
+# key: meta_
+# --
+#+DATE : 2002114 
+#+AUTHOR: Mohamed Mahmoud Rezk
+#+TITLE: $0
+    
