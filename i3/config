@@ -9,9 +9,6 @@
 
 
 # variables
-#set $TERMINAL alacritty 
-set $SCRIPTS_PATH      ~/scripts
-set $SB_SCRIPTS_PATH   ~/scripts/statusbar
 set $super              Mod4
 # set $TERMINAL           alacritty -o font.size=15
 
@@ -28,19 +25,13 @@ default_floating_border pixel 1
 
 #fonts
 font pango:monospace 11
-#font pango:DejaVu Sans Mono 11
 
 # startup application 
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
-# exec --no-startup-id blueman-applet
-
 
 floating_modifier       $super
 tiling_drag modifier    titlebar
-
-
-
 
 # Define names for default workspaces for which we configure key bindings later on
 set $ws1 "1"
@@ -58,30 +49,29 @@ set $ws10 "10"
 # i3bar for primary monitor 
 bar {
         status_command i3blocks
-        status_command STATUSBAR=~/scripts/statusbar i3blocks
         position top 
         font pango:monospace 9
         output DP-2
 
         colors {
-                background         $mono_black
-#                                   BORDER       BACKGROUND   TEXT
-                focused_workspace  $focused     $focused     $white
-                inactive_workspace $mono_black  $mono_black  $white
+        background         $mono_black
+#                          BORDER       BACKGROUND   TEXT
+        focused_workspace  $focused     $focused     $white
+        inactive_workspace $mono_black  $mono_black  $white
     }
 }
 
 # second monitor bar 
 bar {
+        status_command i3blocks
         position top 
         font pango:monospace 12
-        status_command STATUSBAR=~/scripts/statusbar i3blocks
         output HDMI-0
         colors {
-                background         $mono_black
-#                                   BORDER       BACKGROUND   TEXT
-                focused_workspace  $focused     $focused     $white
-                inactive_workspace $mono_black  $mono_black  $white
+        background         $mono_black
+#                          BORDER       BACKGROUND   TEXT
+        focused_workspace  $focused     $focused     $white
+        inactive_workspace $mono_black  $mono_black  $white
     }
 }
 

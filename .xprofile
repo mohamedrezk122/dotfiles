@@ -1,7 +1,7 @@
 #!/bin/sh
 #
-export SCRIPTS="$HOME/scripts"
-export STATUSBAR="$HOME/scripts/statusbar"
+export SCRIPTS="$HOME/dotfiles/scripts"
+export STATUSBAR="$HOME/dotfiles/statusbar"
 export FILEMANAGER=ranger
 export GUI_FILE_MANAGER=thunar
 export EDITOR=lvim
