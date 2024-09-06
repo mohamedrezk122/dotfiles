@@ -28,3 +28,5 @@ source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PROMPT='%B%F{cyan}%c%f%b %B%F{202}>%f%b '
 # colorscript -e 45
 
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
