@@ -34,48 +34,47 @@ floating_modifier       $super
 tiling_drag modifier    titlebar
 
 # Define names for default workspaces for which we configure key bindings later on
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
+set $ws1  "1"
+set $ws2  "2"
+set $ws3  "3"
+set $ws4  "4"
+set $ws5  "5"
+set $ws6  "6"
+set $ws7  "7"
+set $ws8  "8"
+set $ws9  "9"
 set $ws10 "10"
-
 
 # i3bar for primary monitor 
 bar {
-        status_command i3blocks
-        position top 
-        font pango:monospace 9
-        output DP-2
+    status_command i3blocks
+    position top 
+    font pango:monospace 9
+    output DP-2
 
-        colors {
-        background         $mono_black
-#                          BORDER       BACKGROUND   TEXT
-        focused_workspace  $focused     $focused     $white
-        inactive_workspace $mono_black  $mono_black  $white
+    colors {
+    background         $mono_black
+#                      BORDER       BACKGROUND   TEXT
+    focused_workspace  $focused     $focused     $white
+    inactive_workspace $mono_black  $mono_black  $white
     }
 }
 
 # second monitor bar 
 bar {
-        status_command i3blocks
-        position top 
-        font pango:monospace 12
-        output HDMI-0
-        colors {
-        background         $mono_black
-#                          BORDER       BACKGROUND   TEXT
-        focused_workspace  $focused     $focused     $white
-        inactive_workspace $mono_black  $mono_black  $white
+    status_command i3blocks
+    position top 
+    font pango:monospace 12
+    output HDMI-0
+    colors {
+    background         $mono_black
+#                      BORDER       BACKGROUND   TEXT
+    focused_workspace  $focused     $focused     $white
+    inactive_workspace $mono_black  $mono_black  $white
     }
 }
 
-bindsym  $super+backslash        exec st
+bindsym  $super+backslash   exec st
 
 # kill focused window
 bindsym $super+q kill
@@ -88,10 +87,10 @@ bindsym $super+Up       focus up
 bindsym $super+Right    focus right
 
 # move focused window
-bindsym $super+Shift+Left       move left
-bindsym $super+Shift+Down       move down
-bindsym $super+Shift+Up         move up
-bindsym $super+Shift+Right      move right
+bindsym $super+Shift+Left   move left
+bindsym $super+Shift+Down   move down
+bindsym $super+Shift+Up     move up
+bindsym $super+Shift+Right  move right
 
 # split in horizontal orientation
 bindsym $super+h split h
@@ -157,13 +156,11 @@ bindsym $super+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $super+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3?.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-
 # resize windows
-bindsym $super+shift+h  resize shrink width       10 px or 10 ppt
-bindsym $super+shift+l  resize grow   width       10 px or 10 ppt
-bindsym $super+shift+k  resize grow   height      10 px or 10 ppt
-bindsym $super+shift+j  resize shrink height      10 px or 10 ppt
-
+bindsym $super+shift+h  resize shrink width   10 px or 10 ppt
+bindsym $super+shift+l  resize grow   width   10 px or 10 ppt
+bindsym $super+shift+k  resize grow   height  10 px or 10 ppt
+bindsym $super+shift+j  resize shrink height  10 px or 10 ppt
 
 
 # class            border       backgr.   text     indicator  child_border
@@ -175,4 +172,3 @@ workspace_auto_back_and_forth yes
 
 # remove border if it is just single window in the workspace
 hide_edge_borders smart
-
