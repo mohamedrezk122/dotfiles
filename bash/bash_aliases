@@ -83,7 +83,7 @@ get_pass(){
 }
 
 gen_pass(){
-  pwgen -By 30 1 | xclip -selection clipboard
+    pwgen -By 30 1 | xclip -selection clipboard
 }
 
 change_mac(){
@@ -95,5 +95,4 @@ change_mac(){
 marktext(){
     swallow ~/pkgs/marktext.AppImage "$@" & disown >/dev/null 
 }
-
 
