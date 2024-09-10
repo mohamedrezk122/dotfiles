@@ -15,18 +15,24 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 
 source ~/.bashrc
 source ~/.bash_aliases
-
 source $ZDOTDIR/plugins/F-Sy-H/F-Sy-H.plugin.zsh
 source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # source $ZDOTDIR/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 # source $ZDOTDIR/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-# autoload -U compinit; compinit
-# autoload -U colors && colors    # Load colors
-
 export PROMPT='%B%F{cyan}%c%f%b %B%F{202}>%f%b '
 # colorscript -e 45
+
+autoload -Uz +X compinit && compinit
+
+# case insensitive path-completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' menu select
+
+
+# fix word delimiter
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
