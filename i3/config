@@ -23,11 +23,10 @@ set $focused     "#005B80"
 default_border pixel 
 default_floating_border pixel 1
 
-#fonts
+# fonts
 font pango:monospace 11
 
 # startup application 
-exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
 
 floating_modifier       $super
