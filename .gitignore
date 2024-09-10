@@ -1,3 +1,6 @@
 emacs/elpa/
 emacs/straight
 __pycache__
+emacs/smex*
+emacs/amx*
+scripts/void-build
