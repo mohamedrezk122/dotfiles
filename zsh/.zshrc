@@ -2,7 +2,7 @@ export HISTSIZE=100000
 export SAVEHIST=100000
 
 # HISTORY STUFF: copied from here: https://github.com/Phantas0s/.dotfiles/blob/master/zsh/zshrc
-HISTFILE=$HOME/.zsh_history
+HISTFILE=$ZDOTDIR/.zsh_history
 setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
 setopt SHARE_HISTORY             # Share history between all sessions.
 setopt HIST_EXPIRE_DUPS_FIRST    # Expire a duplicate event first when trimming history.
@@ -13,8 +13,7 @@ setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
 setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
 
-source ~/.bashrc
-source ~/.bash_aliases
+source $ZDOTDIR/aliases
 source $ZDOTDIR/plugins/F-Sy-H/F-Sy-H.plugin.zsh
 source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
