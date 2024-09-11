@@ -1,4 +1,4 @@
 #!/bin/sh
 
-feh --bg-fill ~/Pictures/Wallpapers/al-khwarizmi-3.webp --bg-fill ~/Pictures/wallpapers/al-khwarizmi-3.webp
+feh --no-fehbg --bg-fill ~/Pictures/Wallpapers/al-khwarizmi-3.webp --bg-fill ~/Pictures/wallpapers/al-khwarizmi-3.webp
 
