@@ -1,5 +1,5 @@
 #!/bin/sh
-#
+
 export SCRIPTS="$HOME/dotfiles/scripts"
 export STATUSBAR="$HOME/dotfiles/statusbar"
 export FILEMANAGER=ranger
@@ -10,10 +10,11 @@ export BROWSER=firefox
 export TERMINAL=st
 
 # some startup scripts
-sh   $SCRIPTS/set-bg
-sh   $SCRIPTS/brightness
-sh   $SCRIPTS/touchpad
-sh   $SCRIPTS/keyboard
+sh $SCRIPTS/setbg
+sh $SCRIPTS/brightness
+sh $SCRIPTS/touchpad
+sh $SCRIPTS/keyboard
+
 
 xscreensaver --no-splash  &
 sxhkd -m -1 -c ~/.config/sxhkd/sxhkdrc &
