@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rofi -show combi -modes combi -combi-modes "window,drun" -theme Monokai -font "Ubuntu Mono 20" -display-drun "" -display-window "" -show-icons
