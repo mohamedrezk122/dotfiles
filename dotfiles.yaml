@@ -28,10 +28,10 @@
     # zsh
     ~/.zshenv: .zshenv
     ~/.config/zsh: zsh/
-
+    # mpv
+    ~/.config/mpv/: mpv/
     # some home stuff
     ~/.config/nvidia/settings: nvidia/settings
-
     ~/.xprofile: .xprofile
     ~/.config/readline/: readline/
     ~/.xscreensaver: .xscreensaver
@@ -39,7 +39,8 @@
     ~/scripts: scripts
 
 - create:
-    - ~/.config/readline
+    - ~/.config/mpv/
+    - ~/.config/readline/
     - ~/.config/nvidia/
     - ~/.config/bash/
     - ~/.config/zsh/
