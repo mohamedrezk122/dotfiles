@@ -22,23 +22,26 @@
     ~/.config/sxhkd/: sxhkd/
     ~/.config/htop/: htop/
     # bash
-    ~/.bashrc: bash/bashrc
-    ~/.bash_aliases: bash/bash_aliases
     ~/.bash_profile: bash/bash_profile
+    ~/.config/bash/bashrc: .zshenv
+    ~/.config/bash/bash_aliases: zsh/aliases
     # zsh
     ~/.zshenv: .zshenv
     ~/.config/zsh: zsh/
 
     # some home stuff
-    ~/.xprofile: .xprofile
-    ~/.nvidia-settings-rc: .nvidia-settings-rc
-    ~/.inputrc: .inputrc
-    ~/.xsession: .xsession
-    ~/.xscreensaver: .xscreensaver
+    ~/.config/nvidia/settings: nvidia/settings
 
+    ~/.xprofile: .xprofile
+    ~/.config/readline/: readline/
+    ~/.xscreensaver: .xscreensaver
+    # /etc/lxdm/lxdm.conf: lxdm.conf
     ~/scripts: scripts
 
 - create:
+    - ~/.config/readline
+    - ~/.config/nvidia/
+    - ~/.config/bash/
     - ~/.config/zsh/
     - ~/.config/zathura/
     - ~/.config/lf/
