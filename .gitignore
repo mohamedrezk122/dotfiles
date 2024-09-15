@@ -4,3 +4,6 @@ __pycache__
 emacs/smex*
 emacs/amx*
 scripts/void-build
+.zsh_history
+.zcompdump
+micro/
