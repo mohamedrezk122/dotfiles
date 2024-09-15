@@ -20,15 +20,9 @@ alias cat="bat"
 alias cls=clear
 alias f3d="swallow f3d & disown"
 alias x="exit"
-alias doas="doas "
-# i3 
-alias i3conf="micro ~/.config/i3/config"
-alias i3bconf="micro ~/.config/i3blocks/config"
 alias lf=lfrun
-# text editors  
 alias p="python3.12"
 alias s="subl4"
-alias m="micro"
 alias v="vim"
 alias nv="nvim"
 alias lv="lvim" 
@@ -36,9 +30,6 @@ alias r="ranger"
 alias z="swallow zathura "
 alias sk="swallow sioyek "
 alias discord="swallow ~/pkgs/discord/Discord & disown"
-#scripts 
-alias sb="~/.scripts/statusbar"
-# Latex
 alias tlmgr="doas tlmgr "
 # xbps 
 alias xu='doas xbps-install -u xbps -y ; doas xbps-install -Suv'       # update packages 
@@ -61,14 +52,12 @@ alias zzz='doas zzz'
 alias conservation="doas sh ~/scripts/conservation"
 alias blog="cd ~/Documents/blog/blog-source-code" 
 alias pro="cd ~/Documents/projects/"
-
 alias movies="cd /mnt/Data/movies-and-series"
 alias todo="sh ~/scripts/todo"
-
 alias asmarine="xhost + ; distrobox enter asmarine"
-
 alias adb='HOME="$XDG_DATA_HOME"/android adb'
-## FUNCTIONS 
+
+# FUNCTIONS 
 clean(){
 	  doas xbps-remove -o # remove unneeded orphan pkgs
 	  doas xbps-remove -O # remove obsolete cache
