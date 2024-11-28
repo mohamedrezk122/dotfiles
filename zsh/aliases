@@ -28,8 +28,6 @@ alias nv="nvim"
 alias lv="lvim" 
 alias r="ranger"
 alias z="swallow zathura "
-alias sk="swallow sioyek "
-alias discord="swallow ~/pkgs/discord/Discord & disown"
 alias tlmgr="doas tlmgr "
 # xbps 
 alias xu='doas xbps-install -u xbps -y ; doas xbps-install -Suv'       # update packages 
@@ -41,6 +39,8 @@ alias xf='xl | grep '                   # search in installed packages
 alias xs='xbps-query -Rs'               # query package in repos  
 alias xd='xbps-query -x'                # query package dependencies
 alias xrd='xbps-query -X'               # query package reverse dependencies    
+alias xh="xbps-pkgdb -m hold "          # prevenet a package from being updated
+alias xuh="xbps-pkgdb -m unhold "       # release the hold
 
 # session management
 alias reboot="doas reboot"
@@ -50,10 +50,9 @@ alias poweroff='doas poweroff'
 alias zzz='doas zzz'
 
 alias conservation="doas sh ~/scripts/conservation"
-alias blog="cd ~/Documents/blog/blog-source-code" 
+alias blog="cd ~/Documents/blog" 
 alias pro="cd ~/Documents/projects/"
 alias movies="cd /mnt/Data/movies-and-series"
-alias todo="sh ~/scripts/todo"
 alias asmarine="xhost + ; distrobox enter asmarine"
 alias adb='HOME="$XDG_DATA_HOME"/android adb'
 
@@ -62,10 +61,6 @@ clean(){
 	  doas xbps-remove -o # remove unneeded orphan pkgs
 	  doas xbps-remove -O # remove obsolete cache
 	  doas vkpurge rm all # remove old kernels and drivers
-}
-
-rmd(){ 
-    Rscript -e "rmarkdown::render('$1')" 
 }
 
 get_pass(){
