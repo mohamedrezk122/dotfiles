@@ -9,7 +9,7 @@ export XDG_RUNTIME_DIR="/home/rezk/.cache/xdgr"
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
-export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
+# export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
 # export XAUTHORITY=/tmp/.Xauthority
 export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME"/bundle
 export BUNDLE_USER_CACHE="$XDG_CACHE_HOME"/bundle
@@ -24,7 +24,7 @@ export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
 export ROS_HOME=$XDG_DATA_HOME/ros
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export PYTHONSTARTUP="$XDG_CONFIG_HOME"/python/pythonrc
-
+export IRBRC="$XDG_CONFIG_HOME"/irb/irbrc
 #disable less history
 export LESSHISTFILE=-
 
@@ -39,12 +39,17 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.local/lib/gems/bin:$PATH"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="/usr/lib/:$PATH"
+export PATH="$PATH:/home/rezk/.local/share/cargo/bin"
 
 export NO_AT_BRIDGE=1
 export GIT_EDITOR=subl4
 export EDITOR=subl4
 export GEM_HOME="$HOME/.local/lib/gems"
 
-# export PYTHONPATH=${PYTHONPATH}:"/usr/lib/python3.12/:/usr/lib/python3.12/lib-dynload"
+export GTK_RC_FILES="$XDG_CONFIG_HOME/gtk-1.0/gtkrc" 
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc":"$XDG_CONFIG_HOME/gtk-2.0/gtkrc.mine"
+export GTK_THEME="Adwaita:dark"
+
+#export PYTHONPATH=${PYTHONPATH}:"/usr/lib/python3.12/:/usr/lib/python3.12/lib-dynload"
 export PYTHONPATH=$PYTHONPATH:"/usr/local/python3.11.6/:/usr/local/python3.11.6/lib/python3.11/lib-dynload/"
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib/"
+# export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/lib/"
