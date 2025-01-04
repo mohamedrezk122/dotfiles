@@ -32,14 +32,16 @@ export LESSHISTFILE=-
 export ZDOTDIR=~/.config/zsh/
 # . "$CARGO_HOME/env"
 
-export PATH="$HOME/pkgs/pypy3.10-v7.3.16-linux64/bin:$PATH"
-export PATH=/opt/texlive/2021/bin/x86_64-linux/:$PATH
-export PATH="$HOME/pkgs/context/tex/texmf-linux-64/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.local/lib/gems/bin:$PATH"
+export PATH="$PATH:/usr/lib/"
+export PATH="$PATH:/opt/texlive/2021/bin/x86_64-linux/"
 export PATH="$PATH:/opt/nvim-linux64/bin"
-export PATH="/usr/lib/:$PATH"
-export PATH="$PATH:/home/rezk/.local/share/cargo/bin"
+export PATH="$PATH:$HOME/pkgs/context/tex/texmf-linux-64/bin"
+export PATH="$PATH:$HOME/pkgs/pypy3.10-v7.3.16-linux64/bin"
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/lib/gems/bin"
+export PATH="$PATH:$HOME/.local/share/cargo/bin"
+export PATH="$PATH:$HOME/.local/share/coursier/bin"
+export PATH="$PATH:$HOME/pkgs/mongodb/bin"
 
 export NO_AT_BRIDGE=1
 export GIT_EDITOR=subl4
